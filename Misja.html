@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Szpital Wojewódzki</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .hospital-mission{
+            position:relative;
+            top:-150px;
+            margin:25px;
+            font-size:25px;
+            text-align:center
+        }
+        p {
+            position: relative;
+            font-size: 18px;
+            margin: 25px;
+            text-align: left;
+            top: -130px;
+        }
+    </style>
+</head>
+<body>
+    <div id="visit-counter">Liczba odwiedzin: <span id="counter">0</span></div>
+    <div id="clock"></div>
+    <div id="date"></div>
+    <div id="time-spent"></div>
+    <div class="canvas-container"></div>
+    <canvas id="myCanvas" width="400" height="300"></canvas>
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="Zasady przyjęcia do Szpitala.html" target="_self" class="dropbtn">Zasady przyjęcia do Szpitala</a>
+            </li>
+            <li class="dropdown">
+                <span class="dropbtn">Dla pacjenta</span>
+                <div class="dropdown-content">
+                    <a href="Rejestracja.html">Rejestracja</a>
+                    <a href="Cennik.html">Cennik</a>
+                    <a href="RODO.html">RODO</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <span class="dropbtn">Szpital</span>
+                <div class="dropdown-content">
+                    <a href="Galeria.html">Galeria obrazów</a>
+                    <a href="O nas.html">O nas</a>
+                    <a href="Misja.html">Misja</a>
+                    <a href="Poradnie.html">Poradnie</a>
+                </div>
+            </li>
+            <li><a href="Kontakt.html" target="_self">Kontakt</a></li>
+        </ul>
+    </nav>
+    <header2>Misja</header2>
+    <div class="hospital-mission">
+        <i>Przysięgam na Apollona lekarza, na Asklepiosa, Hygeję i Panakeję, na wszystkich bogów i boginie,</i>
+        <i>czyniąc ich świadkami, że będę podług mej zdolności i mego osądu wypełniał te przysięgę i ten zapis.</i>
+    </div>
+    <p>Misją naszego szpitala jest zapewnienie najwyższej jakości opieki medycznej, opartej na nowoczesnych metodach leczenia i indywidualnym podejściu do każdego pacjenta.</p>
+    <p>Dążymy do doskonałości poprzez ciągłe doskonalenie naszych usług, inwestycje w nowoczesną technologię oraz rozwój naszego personelu medycznego.</p>
+    <p>Naszym celem jest nie tylko leczenie chorób, ale także promowanie zdrowego stylu życia i profilaktyki zdrowotnej w społeczności lokalnej.</p>
+    <p>Chcemy być miejscem, w którym pacjenci czują się bezpiecznie, komfortowo i odpowiednio zrozumiani, a ich zdrowie i dobro zawsze stawiane są na pierwszym miejscu.</p>
+    <footer>
+        <i>&copy; Mikołaj Tandecki, Projekt strony internetowej wykonany w ramach zaliczenia przedmiotu MO: TLiSKwE na kierunku Energetyka.</i>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

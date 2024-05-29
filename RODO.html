@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Szpital Wojewódzki</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .container {
+            position:relative;
+            max-width: 800px;
+            margin-left: 330px; 
+            padding: 20px;
+            top:-170px
+        }
+
+        h1 {
+            text-align: center;
+            position:relative
+        }
+
+        p {
+            margin-bottom: 20px;
+            padding:5px;
+            font-size:17px
+        }
+
+        strong {
+            font-weight: bold;
+            
+        }
+        ul{
+            list-style-type:none
+        }
+    </style>
+</head>
+<body>
+    <div id="visit-counter">Liczba odwiedzin: <span id="counter">0</span></div>
+    <div id="clock"></div>
+    <div id="date"></div>
+    <div id="time-spent"></div>
+    <div class="canvas-container"></div>
+    <canvas id="myCanvas" width="400" height="300"></canvas>
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="Zasady przyjęcia do Szpitala.html" target="_self" class="dropbtn">Zasady przyjęcia do Szpitala</a>
+            </li>
+            <li class="dropdown">
+                <span class="dropbtn">Dla pacjenta</span>
+                <div class="dropdown-content">
+                    <a href="Rejestracja.html">Rejestracja</a>
+                    <a href="Cennik.html">Cennik</a>
+                    <a href="RODO.html">RODO</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <span class="dropbtn">Szpital</span>
+                <div class="dropdown-content">
+                    <a href="Galeria.html">Galeria obrazów</a>
+                    <a href="O nas.html">O nas</a>
+                    <a href="Misja.html">Misja</a>
+                    <a href="Poradnie.html">Poradnie</a>
+                </div>
+            </li>
+            <li><a href="Kontakt.html" target="_self">Kontakt</a></li>
+        </ul>
+    </nav>
+    <header2>RODO</header2>
+    <div class="container">
+        <h1>ROZPORZĄDZENIE PARLAMENTU EUROPEJSKIEGO I RADY (UE) 2016/679</h1>
+        <p><strong>Art. 1.</strong><br>Przedmiot i cel</p>
+        <p>1. Niniejsze rozporządzenie określa zasady dotyczące ochrony osób fizycznych w związku z przetwarzaniem danych osobowych oraz swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych).</p>
+        <p>2. Celem niniejszego rozporządzenia jest zapewnienie, w ramach związku z przetwarzaniem danych osobowych, swobodnego przepływu danych w Unii Europejskiej oraz zapewnienie wysokiego, równego poziomu ochrony osób fizycznych w związku z przetwarzaniem danych osobowych we wszystkich państwach członkowskich i równoczesne ujednolicenie zasad przetwarzania danych osobowych we wszystkich państwach członkowskich.</p>
+        <p><strong>Art. 2.</strong><br>Przedmiotowy zakres</p>
+        <p>Niniejsze rozporządzenie ma zastosowanie do przetwarzania danych osobowych w zakresie, w którym przetwarzanie to wykonywane jest w ramach działalności przedsiębiorstwa („przetwarzanie prowadzone w ramach działalności przedsiębiorstwa”).</p>
+        <p><strong>Art. 3.</strong><br>Stosowanie przez niezależnych administratorów danych</p>
+        <p>1. Niniejsze rozporządzenie stosuje się do przetwarzania danych osobowych w całej Unii Europejskiej.</p>
+        <p>2. Niniejsze rozporządzenie stosuje się również do przetwarzania danych osobowych osób fizycznych z Unii Europejskiej przez niezależnych administratorów danych lub przetwarzających, którzy nie są w Unii Europejskiej, gdy:</p>
+   <ul>
+       <li>a) przetwarzanie dotyczy oferowania towarów lub usług osobom fizycznym w Unii Europejskiej, niezależnie od tego, czy za nie zapłacą, czy też nie, lub</li>
+   </ul>
+   <ul>
+       <li>b) przetwarzanie jest związane z monitorowaniem zachowania osób fizycznych, które ma miejsce w Unii Europejskiej.</li>
+   </ul>
+   <p>3. Niniejsze rozporządzenie ma zastosowanie do przetwarzania danych osobowych przez niezależnych administratorów danych i przetwarzających, którzy są zamieszkani w państwie trzecim w związku z oferowaniem towarów lub usług przeznaczonych dla osób fizycznych w Unii Europejskiej, bez względu na to, czy płacą za nie, czy też nie, oraz w przypadku monitorowania zachowania osób fizycznych, które ma miejsce w Unii Europejskiej.</p>
+    </div>
+        <footer>
+            <i>&copy; Mikołaj Tandecki, Projekt strony internetowej wykonany w ramach zaliczenia przedmiotu MO: TLiSKwE na kierunku Energetyka.</i>
+        </footer>
+        <script src="index.js"></script>
+</body>
+</html>

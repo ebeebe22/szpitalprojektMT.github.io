@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Szpital Wojewódzki</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+
+        .gallery-container {
+            position:relative;
+            top:-150px;
+            text-align: center;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #gallery-image {
+            max-width: 60%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid lightgray;
+            padding: 10px;
+            background-color: white;
+        }
+
+        .gallery-controls {
+            margin-top: 10px;
+        }
+
+        button {
+            margin: 0 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="visit-counter">Liczba odwiedzin: <span id="counter">0</span></div>
+    <div id="clock"></div>
+    <div id="date"></div>
+    <div id="time-spent"></div>
+    <div class="canvas-container"></div>
+    <canvas id="myCanvas" width="400" height="300"></canvas>
+    <header2>Galeria obrazów Szpitala</header2>
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="Zasady przyjęcia do Szpitala.html" target="_self" class="dropbtn">Zasady przyjęcia do Szpitala</a>
+            </li>
+            <li class="dropdown">
+                <span class="dropbtn">Dla pacjenta</span>
+                <div class="dropdown-content">
+                    <a href="Rejestracja.html">Rejestracja</a>
+                    <a href="Cennik.html">Cennik</a>
+                    <a href="RODO.html">RODO</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <span class="dropbtn">Szpital</span>
+                <div class="dropdown-content">
+                    <a href="Galeria.html">Galeria obrazów</a>
+                    <a href="O nas.html">O nas</a>
+                    <a href="Misja.html">Misja</a>
+                    <a href="Poradnie.html">Poradnie</a>
+                </div>
+            </li>
+            <li><a href="Kontakt.html" target="_self">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <div class="gallery-container">
+        <img id="gallery-image" src="images/image1.jpg" alt="Galeria Obrazów">
+        <div class="gallery-controls">
+            <button id="first">Pierwszy</button>
+            <button id="previous">Poprzedni</button>
+            <button id="next">Następny</button>
+            <button id="last">Ostatni</button>
+        </div>
+    </div>
+    <script>
+        const images = [
+            'lekarz.jpg',
+            'lozka.jpg',
+            'badanie.jpg',
+            'strzykawka.jpg',
+            'stetoskop.jpg'
+        ];
+
+        let currentIndex = 0;
+
+        const galleryImage = document.getElementById('gallery-image');
+        const firstButton = document.getElementById('first');
+        const previousButton = document.getElementById('previous');
+        const nextButton = document.getElementById('next');
+        const lastButton = document.getElementById('last');
+
+        function updateImage(index) {
+            galleryImage.src = images[index];
+        }
+
+        firstButton.addEventListener('click', () => {
+            currentIndex = 0;
+            updateImage(currentIndex);
+        });
+
+        previousButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = images.length - 1;
+            }
+            updateImage(currentIndex);
+        });
+
+        nextButton.addEventListener('click', () => {
+            if (currentIndex < images.length - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            updateImage(currentIndex);
+        });
+
+        lastButton.addEventListener('click', () => {
+            currentIndex = images.length - 1;
+            updateImage(currentIndex);
+        });
+
+        document.addEventListener('keydown', (event) => {
+            switch (event.key) {
+                case 'ArrowLeft':
+                    previousButton.click();
+                    break;
+                case 'ArrowRight':
+                    nextButton.click();
+                    break;
+            }
+        });
+
+        updateImage(currentIndex);
+    </script>
+    <footer>
+        <p>&copy; Mikołaj Tandecki, Projekt strony internetowej wykonany w ramach zaliczenia przedmiotu MO: TLiSKwE na kierunku Energetyka.</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Szpital</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        table {
+            position:relative;
+            top:-145px;
+            left:345px;
+            width: 800px;
+            border-collapse: collapse;
+        }
+
+        th, td{
+            border: 1px solid lightgray;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: lightblue;
+            font-weight: bold;
+        }
+        td{
+            width:10%
+        }
+    </style>
+</head>
+<body>
+    <div id="visit-counter">Liczba odwiedzin: <span id="counter">0</span></div>
+    <div id="clock"></div>
+    <div id="date"></div>
+    <div id="time-spent"></div>
+    <div class="canvas-container"></div>
+    <canvas id="myCanvas" width="400" height="300"></canvas>
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="Zasady przyjęcia do Szpitala.html" target="_self" class="dropbtn">Zasady przyjęcia do Szpitala</a>
+            </li>
+            <li class="dropdown">
+                <span class="dropbtn">Dla pacjenta</span>
+                <div class="dropdown-content">
+                    <a href="Rejestracja.html">Rejestracja</a>
+                    <a href="Cennik.html">Cennik</a>
+                    <a href="RODO.html">RODO</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <span class="dropbtn">Szpital</span>
+                <div class="dropdown-content">
+                    <a href="Galeria.html">Galeria obrazów</a>
+                    <a href="O nas.html">O nas</a>
+                    <a href="Misja.html">Misja</a>
+                    <a href="Poradnie.html">Poradnie</a>
+                </div>
+            </li>
+            <li><a href="Kontakt.html" target="_self">Kontakt</a></li>
+        </ul>
+    </nav>
+    <header2>Cennik Usług Szpitalnych</header2>
+    <table>
+        <tr>
+            <th colspan="2">Pracownia radiologiczna</th>
+        </tr>
+        <tr>
+            <td>RTG klatki piersiowej</td>
+            <td rowspan="2">200 PLN</td>
+        </tr>
+        <tr>
+            <td>RTG jamy brzusznej</td>
+        </tr>
+        <tr>
+            <td>RTG kończyn</td>
+            <td>150 PLN</td>
+        </tr>
+        <tr>
+            <td>RTG czaszki</td>
+            <td>220 PLN</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th colspan="2">Pracownia USG</th>
+        </tr>
+        <tr>
+            <td>USG jamy brzusznej</td>
+            <td rowspan="2">300 PLN</td>
+        </tr>
+        <tr>
+            <td>USG tarczycy</td>
+        </tr>
+        <tr>
+            <td>USG piersi</td>
+            <td rowspan="3">250 PLN</td>
+        </tr>
+        <tr>
+            <td>USG jąder</td>           
+        </tr>
+        <tr>
+            <td>USG kolana</td>          
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th colspan="2">Usługi w zakresie dermatologii</th>
+        </tr>
+        <tr>
+            <td>Porada specjalisty</td>
+            <td>200 PLN</td>
+        </tr>
+        <tr>
+            <td>Badanie skóry</td>
+            <td>250 PLN</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th colspan="2">Usługi w zakresie chirurgii</th>
+        </tr>
+        <tr>
+            <td>Operacja serca</td>
+            <td>5000 PLN</td>
+        </tr>
+        <tr>
+            <td>Operacja nerek</td>
+            <td rowspan="2">8000 PLN</td>
+        </tr>
+        <tr>
+            <td>Operacja żołądka</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th colspan="2">Usługi w zakresie psychiatrii</th>
+        </tr>
+        <tr>
+            <td>Konsultacja psychiatryczna</td>
+            <td>200 PLN</td>
+        </tr>
+        <tr>
+            <td>Terapia behawioralna</td>
+            <td>300 PLN</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th colspan="2">Usługi w zakresie neurologii</th>
+        </tr>
+        <tr>
+            <td>Konsultacja neurologiczna</td>
+            <td>300 PLN</td>
+        </tr>
+        <tr>
+            <td>Elektromiografia</td>
+            <td>480 PLN</td>
+        </tr>
+        <tr>
+            <td>EEG</td>
+            <td rowspan="2">350 PLN</td>
+        </tr>
+        <tr>
+            <td>Neurorehabilitacja</td>
+        </tr>
+        <tr>
+            <td>Badanie polisomnograficzne</td>
+            <td rowspan="2">400 PLN</td>
+        </tr>
+        <tr>
+            <td>Tomografia komputerowa mózgu</td>
+        </tr>
+        <tr>
+            <td>Badanie rezonansu magnetycznego kręgosłupa</td>
+            <td>1000 PLN</td>
+        </tr>
+        <tr>
+            <td>Testy neuropsychologiczne</td>
+            <td>440 PLN</td>
+        </tr>
+        <tr>
+            <td>Blokada nerwów</td>
+            <td>500 PLN</td>
+        </tr>
+        <tr>
+            <td>Iniekcje botulinowej w leczeniu migreny</td>
+            <td>150 PLN</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th colspan="2">Usługi w zakresie kardiologii</th>
+        </tr>
+        <tr>
+            <td>EKG spoczynkowe</td>
+            <td rowspan="2">250 PLN</td>
+        </tr>
+        <tr>
+            <td>Badanie echokardiograficzne</td>
+        </tr>
+        <tr>
+            <td>Test wysiłkowy</td>
+            <td>300 PLN</td>
+        </tr>
+        <tr>
+            <td>Koronarografia</td>
+            <td>590 PLN</td>
+        </tr>
+        <tr>
+            <td>Kontrola ciśnienia tętniczego</td>
+            <td rowspan="2">350 PLN</td>
+        </tr>
+        <tr>
+            <td>Stres test</td>
+        </tr>
+        <tr>
+            <td>Implantacja stentu</td>
+            <td>400 PLN</td>
+        </tr>
+        <tr>
+            <td>Badanie żył</td>
+            <td>320 PLN</td>
+        </tr>
+        <tr>
+            <td>Monitorowanie rytmu serca</td>
+            <td>450 PLN</td>
+        </tr>
+        <tr>
+            <td>Kardiochirurgia</td>
+            <td>4500 PLN</td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th colspan="2">Transport sanitarny</th>
+        </tr>
+        <tr>
+            <td>Transport karetką do 10km</td>
+            <td>300 PLN</td>
+        </tr>
+        <tr>
+            <td>Transport karetką ponad 10km</td>
+            <td>500 PLN</td>
+        </tr>
+        <tr>
+            <td>Transport pacjenta na wózku</td>
+            <td>380 PLN</td>
+        </tr>
+
+    </table>
+    <table>
+        <tr>
+            <th colspan="2">Badania laboratoryjne</th>
+        </tr>
+        <tr>
+            <td>Badanie ogólne moczu</td>
+            <td rowspan="2">110 PLN</td>
+        </tr>
+        <tr>
+            <td>Badanie kału na pasożyty</td>
+        </tr>
+        <tr>
+            <td>Badanie krwi podstawowe (morfologia)</td>
+            <td>100 PLN</td>
+        </tr>
+        <tr>
+            <td>Badanie krwi - OB</td>
+            <td>90 PLN</td>
+        </tr>
+        <tr>
+            <td>Badanie krwi - grupa krwi i czynnik Rh</td>
+            <td rowspan="2">80 PLN</td>
+        </tr>
+        <tr>
+            <td>Badanie krwi - glukoza</td>
+        </tr>
+        <tr>
+            <td>Badanie krwi - cholesterol</td>
+            <td>120 PLN</td>
+        </tr>
+        <tr>
+            <td>Badanie krwi - lipidogram</td>
+            <td>300 PLN</td>
+        </tr>
+        <tr>
+            <td>Badanie krwi - elektrolity</td>
+            <td>150 PLN</td>
+        </tr>
+        <tr>
+            <td>Badanie krwi - mocznik i kreatynina</td>
+            <td>100 PLN</td>
+        </tr>
+        <tr>
+            <td>Badanie krwi - wapń</td>
+            <td rowspan="2">200 PLN</td>
+        </tr>
+        <tr>
+            <td>Badanie krwi - żelazo</td>
+        </tr>
+    </table>
+
+    <footer>
+        <i>&copy; Mikołaj Tandecki, Projekt strony internetowej wykonany w ramach zaliczenia przedmiotu MO: TLiSKwE na kierunku Energetyka.</i>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

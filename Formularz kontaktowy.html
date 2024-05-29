@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Szpital Wojewódzki</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <div id="visit-counter">Liczba odwiedzin: <span id="counter">0</span></div>
+    <div id="clock"></div>
+    <div id="date"></div>
+    <div id="time-spent"></div>
+    <div class="canvas-container"></div>
+    <canvas id="myCanvas" width="400" height="300"></canvas>
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="Zasady przyjęcia do Szpitala.html" target="_self" class="dropbtn">Zasady przyjęcia do Szpitala</a>
+            </li>
+            <li class="dropdown">
+                <span class="dropbtn">Dla pacjenta</span>
+                <div class="dropdown-content">
+                    <a href="Rejestracja.html">Rejestracja</a>
+                    <a href="Cennik.html">Cennik</a>
+                    <a href="RODO.html">RODO</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <span class="dropbtn">Szpital</span>
+                <div class="dropdown-content">
+                    <a href="Galeria.html">Galeria obrazów</a>
+                    <a href="O nas.html">O nas</a>
+                    <a href="Misja.html">Misja</a>
+                    <a href="Poradnie.html">Poradnie</a>
+                </div>
+            </li>
+            <li><a href="Kontakt.html" target="_self">Kontakt</a></li>
+        </ul>
+    </nav>
+    <div id="form-container">
+        <form action="obsługa_formularza.php" method="POST">
+            <h2>FORMULARZ KONTAKTOWY</h2>
+            <label for="imie">Imię:</label>
+            <input type="text" id="imie" name="imie" required><br><br>
+
+            <label for="nazwisko">Nazwisko:</label>
+            <input type="text" id="nazwisko" name="nazwisko" required><br><br>
+
+            <label for="email">Adres e-mail:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label>Płeć:</label>
+            <div class="input-group">
+                <input type="radio" id="plecM" name="plec" value="M">
+                <label for="plecM">Mężczyzna</label>
+            </div>
+            <div class="input-group">
+                <input type="radio" id="plecK" name="plec" value="K">
+                <label for="plecK">Kobieta</label>
+            </div>
+
+            <label>Poradnia:</label><br>
+            <select id="Poradnia" name="Poradnia">
+                <option value="Chirurgia">Chirurgiczna</option>
+                <option value="Kardiologia">Kardiologiczna</option>
+                <option value="Neurologia">Neurologiczna</option>
+                <option value="Psychiatra">Psychiatryczna</option>
+                <option value="Dermatolog">Dermatologiczna</option>
+            </select><br><br>
+
+            <label for="opis">Opis problemu:</label><br>
+            <textarea id="opis" name="opis" rows="4" cols="50" oninput="autoResize(this)" style="resize: none;"></textarea><br><br>
+
+            <label>Czy jesteś ubezpieczony/a?</label>
+            <div class="input-group">
+                <input type="checkbox" id="ubezpieczony" name="ubezpieczony" value="Tak">
+                <label for="ubezpieczony">Tak</label><br><br>
+            </div>
+
+            <label for="data_wizyty">Data wizyty:</label><br>
+            <input type="date" id="data_wizyty" name="data_wizyty"><br><br>
+
+            <label for="wyniki_badan">Wyniki badań:</label><br>
+            <input type="file" id="wyniki_badan" name="wyniki_badan"><br>
+            <div class="input-group">
+                <input type="checkbox" id="brak_wynikow_badan" name="brak_wynikow_badan" value="Brak">
+                <label for="brak_wynikow_badan">Bez wyników badań</label><br><br>
+            </div>
+
+            <input type="submit" value="Wyślij">
+        </form>
+    </div>
+    <footer>
+        <i>&copy;Mikołaj Tandecki, Projekt strony internetowej wykonany w ramach zaliczenia przedmiotu MO: TLiSKwE na kierunku Energetyka.</i>
+    </footer>
+</body>
+</html>

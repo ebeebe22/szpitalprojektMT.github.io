@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Szpital Wojewódzki</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        ol {
+            position:relative;
+            margin-top:10px;
+            padding:20px 30px;
+            top:-170px;
+            line-height:30px
+        }
+    </style>
+</head>
+<body>
+    <div id="visit-counter">Liczba odwiedzin: <span id="counter">0</span></div>
+    <div id="clock"></div>
+    <div id="date"></div>
+    <div id="time-spent"></div>
+    <div class="canvas-container"></div>
+    <canvas id="myCanvas" width="400" height="300"></canvas>
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="Zasady przyjęcia do Szpitala.html" target="_self" class="dropbtn">Zasady przyjęcia do Szpitala</a>
+            </li>
+            <li class="dropdown">
+                <span class="dropbtn">Dla pacjenta</span>
+                <div class="dropdown-content">
+                    <a href="Rejestracja.html">Rejestracja</a>
+                    <a href="Cennik.html">Cennik</a>
+                    <a href="RODO.html">RODO</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <span class="dropbtn">Szpital</span>
+                <div class="dropdown-content">
+                    <a href="Galeria.html">Galeria obrazów</a>
+                    <a href="O nas.html">O nas</a>
+                    <a href="Misja.html">Misja</a>
+                    <a href="Poradnie.html">Poradnie</a>
+                </div>
+            </li>
+            <li><a href="Kontakt.html" target="_self">Kontakt</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <header2>Zasady przyjęcia do Szpitala</header2>
+        <ol>
+            <li>
+                <strong>Zarejestruj się w rejestracji szpitala:</strong>
+                <ul>
+                    <li>Przybycie do szpitala wymaga rejestracji w punkcie rejestracyjnym.</li>
+                    <li>Rejestrując się, będziesz potrzebować ważnej karty ubezpieczenia zdrowotnego oraz dokumentu tożsamości.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Konsultacja lekarska:</strong>
+                <ul>
+                    <li>Po rejestracji zostaniesz poproszony o konsultację z lekarzem przyjmującym.</li>
+                    <li>Lekarz oceni Twoją sytuację medyczną i zaplanuje dalsze kroki.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Badania diagnostyczne:</strong>
+                <ul>
+                    <li>W zależności od zaleceń lekarza, mogą być konieczne różne badania diagnostyczne, takie jak badania krwi, RTG, tomografia komputerowa itp.</li>
+                    <li>Upewnij się, że jesteś świadomy/świadoma procedur i instrukcji związanych z każdym badaniem.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Przygotowanie do hospitalizacji:</strong>
+                <ul>
+                    <li>Po konsultacji lekarskiej i przeprowadzeniu niezbędnych badań, personel medyczny przekaże Ci informacje dotyczące przygotowań do ewentualnej hospitalizacji.</li>
+                    <li>Przygotuj się na możliwość konieczności pozostania w szpitalu na dłuższy czas i zadbaj o odpowiednią odzież i artykuły osobiste.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Wypis ze szpitala:</strong>
+                <ul>
+                    <li>Pacjent może w każdej chwili zgłosić chęć do opuszczenia szpitala, lecz procedura wypisu nie obowiązuje w weekend.</li>
+                    <li>Jedynym przypadkiem, gdzie pacjent nie może samodzielnie zrezygnować z usług szpitala jest sytuacje, w której pacjent został przywieziony do szpitala karetką.</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+    <footer>
+        <i>&copy; Mikołaj Tandecki, Projekt strony internetowej wykonany w ramach zaliczenia przedmiotu MO: TLiSKwE na kierunku Energetyka.</i>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
